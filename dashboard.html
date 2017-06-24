@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Jesty - Admin</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Dropzone CSS -->
+  <link href="css/dropzone.css" rel="stylesheet">
+  <!-- Custom styles for the Dashboard -->
+  <link href="css/dashboard.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+  <div class="container-fluid">
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="#">Add Page</a>
+        <a href="#">Add Term</a>
+        <form action="/file-upload" class="dropzone">
+          <div class="fallback">
+            <input name="file" type="file" multiple />
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+
+        <div class="accordion">
+          <section class="accordion-item accordion-item--default">
+            <p class="orange"><i class="fa fa-tachometer" aria-hidden="true"></i>&nbsp;Overview</p>
+            <div class="accordion-item-content ">
+              <ul class="nav nav-sidebar">
+                <li><a href="#">Dashboard</a></li>
+              </ul>
+            </div>
+          </section>
+          <section  class="accordion-item">
+            <p class="orange"><i class="fa fa-sitemap" aria-hidden="true"></i>&nbsp;Stucture</p>
+            <div class="accordion-item-content">
+              <ul class="nav nav-sidebar">
+                <li><a href="#">Menus</a></li>
+              </ul>
+            </div>
+          </section>
+          <section  class="accordion-item">
+            <p class="orange"><i class="fa fa-sliders" aria-hidden="true"></i>&nbsp;Design</p>
+            <div class="accordion-item-content">
+              <p>Content for section 3</p>
+              <p>This is my default state.</p>
+            </div>
+          </section>
+          <section  class="accordion-item">
+            <p class="orange"><i class="fa fa-puzzle-piece" aria-hidden="true"></i>&nbsp;Extend</p>
+            <div class="accordion-item-content">
+              <ul class="nav nav-sidebar">
+                <li><a href="#">Store</a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="accordion-item">
+            <p class="orange"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Users</p>
+            <div class="accordion-item-content">
+              <p>Content for section 4</p>
+            </div>
+          </section>
+          <section class="accordion-item">
+            <p class="orange"><i class="fa fa-info" aria-hidden="true"></i>&nbsp;Help</p>
+            <div class="accordion-item-content">
+              <p>Content for section 4</p>
+            </div>
+          </section>
+        </div>
+        <div class="center">
+          <button type="button" class="btn-primary" onclick="openNav()">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="footer">
+
+
+        </div>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <p class="pull-right">Welcome, Xavier&nbsp;<i class="fa fa-sign-out" aria-hidden="true"></i></p>
+        <h1 class="page-header">Dashboard</h1>
+        
+        <div id="embed-api-auth-container"></div>
+        <div id="chart-container"></div>
+        <div id="view-selector-container"></div>
+        
+        <div class="row placeholders">
+          <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
+          </div>
+          <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
+          </div>
+          <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
+          </div>
+          <div class="col-xs-6 col-sm-3 placeholder">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+            <h4>Label</h4>
+            <span class="text-muted">Something else</span>
+          </div>
+        </div>
+        <h2 class="sub-header">Content</h2>
+        <div class="block-white">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><input type="checkbox" value=""></th>
+                <th>Status</th>
+                <th>Id <i class="fa fa-sort pull-right" aria-hidden="true"></i></th>
+                <th>Title <i class="fa fa-sort pull-right" aria-hidden="true"></i></th>
+                <th>URL <i class="fa fa-sort pull-right" aria-hidden="true"></i></th>
+                <th>Date <i class="fa fa-sort pull-right" aria-hidden="true"></i></th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,001</td>
+                <td><a href>Lorem</a></td>
+                <td>/ipsum</td>
+                <td>01/01/2001</td>
+                <td><a href="#">Edit</a>&nbsp;|&nbsp;<a href="#">Delete</a></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,002</td>
+                <td>amet</td>
+                <td>consectetur</td>
+                <td>adipiscing</td>
+                <td>elit</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,003</td>
+                <td>Integer</td>
+                <td>nec</td>
+                <td>odio</td>
+                <td>Praesent</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-warning status">&nbsp;</span></td>
+                <td>1,003</td>
+                <td>libero</td>
+                <td>Sed</td>
+                <td>cursus</td>
+                <td>ante</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-danger status">&nbsp;</span></td>
+                <td>1,004</td>
+                <td>dapibus</td>
+                <td>diam</td>
+                <td>Sed</td>
+                <td>nisi</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,005</td>
+                <td>Nulla</td>
+                <td>quis</td>
+                <td>sem</td>
+                <td>at</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,006</td>
+                <td>nibh</td>
+                <td>elementum</td>
+                <td>imperdiet</td>
+                <td>Duis</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,007</td>
+                <td>sagittis</td>
+                <td>ipsum</td>
+                <td>Praesent</td>
+                <td>mauris</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,008</td>
+                <td>Fusce</td>
+                <td>nec</td>
+                <td>tellus</td>
+                <td>sed</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,009</td>
+                <td>augue</td>
+                <td>semper</td>
+                <td>porta</td>
+                <td>Mauris</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,010</td>
+                <td>massa</td>
+                <td>Vestibulum</td>
+                <td>lacinia</td>
+                <td>arcu</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,011</td>
+                <td>eget</td>
+                <td>nulla</td>
+                <td>Class</td>
+                <td>aptent</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,012</td>
+                <td>taciti</td>
+                <td>sociosqu</td>
+                <td>ad</td>
+                <td>litora</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,013</td>
+                <td>torquent</td>
+                <td>per</td>
+                <td>conubia</td>
+                <td>nostra</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td>
+                <td>1,014</td>
+                <td>per</td>
+                <td>inceptos</td>
+                <td>himenaeos</td>
+                <td>Curabitur</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" value=""></td>
+                <td><span class="label label-success status">&nbsp;</span></td> 
+                <td>1,015</td>
+                <td>sodales</td>
+                <td>ligula</td>
+                <td>in</td>
+                <td>libero</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>  
+      </div>
+    </div>
+  </div>
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://use.fontawesome.com/fb7b73fdbb.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/site.min.js"></script>
+  <script src="js/dropzone.js"></script>
+
+</body>
+</html>

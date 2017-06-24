@@ -1,0 +1,17 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/jesty-admin.min.css: {}
+      "http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css": {type: external, minified: true}
+      'https://fonts.googleapis.com/css?family=Muli:400,300': {type: external, minified: true}
+      css/themify-icons.css: {}
+  js:
+    js/jquery-1.10.2.js: {}
+    js/bootstrap.min.js: {}
+    js/bootstrap-checkbox-radio.js: {}
+    js/chartist.min.js: {}
+    js/bootstrap-notify.js: {}
+    js/site.min.js: {}
+    js/demo.js: {}

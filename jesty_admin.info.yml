@@ -1,0 +1,14 @@
+name: Jesty Admin
+type: theme
+description: 'Tame the beast through our easy to use admin theme'
+core: 8.x
+libraries:
+  - jesty_admin/global-styling
+regions:
+  header: Header
+  content: Content
+  sidebar_first: 'Sidebar first'
+  footer: Footer
+stylesheets-remove:
+  - '@classy/css/components/tabs.css'
+  - core/assets/vendor/normalize-css/normalize.css

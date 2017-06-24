@@ -1,0 +1,9 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: home
+ * Date: 09/01/2015
+ * Time: 17:05
+ */
+
+print 'Hello World';

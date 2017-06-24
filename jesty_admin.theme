@@ -1,0 +1,6 @@
+<?php
+
+function jesty_admin_preprocess_page(&$variables) {
+    $variables['current_user_name'] = $variables['user']->getDisplayName();
+    $variables['current_user_path'] = '/user/' . $variables['user']->id();
+}

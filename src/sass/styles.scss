@@ -1,0 +1,20 @@
+@import
+  "mixins",
+  "vars";
+
+.box {
+  @include box-sizing();
+}
+
+.something {
+  content: "Hello";
+  border: 1px solid;
+}
+
+.dfds {
+  border: 1px solid;
+}
+
+.test {
+  border:1px solid;
+}
